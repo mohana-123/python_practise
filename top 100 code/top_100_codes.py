@@ -822,12 +822,6 @@ print(round(area, 2))
 
 
 
-# code-34:Calculate the number of digits in an integer
-
-# code-35:Convert digit/number to words
-
-# code-36:Counting number of days in a given month of a year
-
 # code-30:Addition of two fractions ======================================================================================
 '''
 import math
@@ -913,10 +907,203 @@ for i in range(len(str(n))):
     n = n//10
 print(r)'''
 
-
+'''
 def fun(n):
     if n == 0:
         return 0
     return n%10 + fun(n//10)
 
 print(fun(123))
+'''
+
+# code-34:Calculate the number of digits in an integer ====================================================================
+'''
+n = int(input())
+c = 0
+for i in range(len(str(n))):
+    c += 1
+print(c)
+'''
+
+
+# code-35:Convert digit/number to words ===========================================================================
+'''
+ Taking input as a string from the user.
+ Check the length of the input.
+ if the length is zero print empty and if the length is greater than 4 print "give a string of specific length"
+ if length id between 1 - 4, Create arrays for different values.
+ Checking the length of the string.
+ According to the place of the digit, we will show the output.
+'''
+'''
+def convert_to_word(num):
+    l = len(num)
+
+    if l == 0:
+        return "enter anything to test it out bro!!!"
+    else:
+        if l > 4:
+            print("give a string of length < 3")
+            return
+        
+        else:
+            pass
+
+num = input()
+print(convert_to_word(num))
+'''
+'''
+def convert_to_words(num):
+ 
+    l = len(num)
+ 
+    # Base cases
+    if (l == 0):
+        print("empty string")
+        return
+ 
+    if (l > 4):
+        print("Length more than 4 is not supported")
+        return
+ 
+    single_digits = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+ 
+    two_digits = ["", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
+ 
+    tens_multiple = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+ 
+    tens_power = ["hundred", "thousand"]
+ 
+    print(num, ":", end=" ")
+ 
+    if (l == 1):
+        print(single_digits[ord(num[0]) - 48])
+        return
+ 
+    x = 0
+    while (x < len(num)):
+        if (l >= 3):
+            if (ord(num[x]) - 48 != 0):
+                print(single_digits[ord(num[x]) - 48],
+                      end=" ")
+                print(tens_power[l - 3], end=" ")
+ 
+            l -= 1
+ 
+        else:
+ 
+            if (ord(num[x]) - 48 == 1):
+                sum = (ord(num[x]) - 48 +
+                       ord(num[x+1]) - 48)
+                print(two_digits[sum])
+                return
+ 
+            elif (ord(num[x]) - 48 == 2 and
+                  ord(num[x + 1]) - 48 == 0):
+                print("twenty")
+                return
+ 
+            else:
+                i = ord(num[x]) - 48
+                if(i > 0):
+                    print(tens_multiple[i], end=" ")
+                else:
+                    print("", end="")
+                x += 1
+                if(ord(num[x]) - 48 != 0):
+                    print(single_digits[ord(num[x]) - 48])
+        x += 1
+ 
+ 
+# Driver Code
+convert_to_words(input()) 
+'''     
+# felt very difficult still i must understand
+
+
+# code-36 :Counting number of days in a given month of a year
+'''
+month = int(input())
+year = int(input())
+    
+if((month==2) and ((year%4==0)  or ((year%100==0) and (year%400==0)))) :
+    print("Number of days is 29")
+
+elif(month==2) :
+    print("Number of days is 28")
+
+elif(month==1 or month==3 or month==5 or month==7 or month==8 or month==10 or month==12) :
+    print("Number of days is 31")
+
+else :
+    print("Number of days is 30")
+'''
+
+'''
+arr = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ]
+month = 12
+year=2025
+    
+if(month==2 and ((year%400==0) or ((year%100!=0) and (year%4==0)))) :
+    print("Number of days is ", arr[month-1]+1)
+    
+else :
+    print("Number of days is ", arr[month-1])
+'''
+
+
+# code-37 :Counting number of days in a given month of a year
+
+
+# code- 38 : Finding Number of times x digit occurs in a given input
+
+# code- 39 : Finding number of integers which has exactly x divisors
+
+
+# code- 40 : Finding Roots of a quadratic equation
+
+# x = [-b ± √(b² - 4ac)] / 2a
+'''
+import math
+
+a = int(input())
+b = int(input())
+c= int(input())
+
+q = int(math.sqrt(abs(b*b - 4*a*c)))
+
+if q > 0:
+    print("Roots are real and different ")
+    print((-b + q)/(2 * a))
+    print((-b - q)/(2 * a))
+elif q == 0:
+    print("Roots are real and same")
+    print(-b / (2*a))
+else:  # q<0
+    print("Roots are complex")
+    print(- b / (2*a), " + i", q)
+    print(- b / (2*a), " - i", q)
+'''
+
+# r = 0
+# for i in range(len(str(n))):
+#     d = n%10
+#     r = r + d
+#     n = n//10
+# print(r)
+
+'''
+def fun(n):
+    if n == 0:
+        return 0
+    return n%10 + fun(n/10)
+
+print(fun(123))
+'''
+
+'''
+yesterday i learned that our voice and visibility is very important to showcase our skills such that the people who 
+search for right candidates 
+'''
+
+
