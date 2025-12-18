@@ -30,15 +30,48 @@ else :
 '''
 
 
-# code-37 :Counting number of days in a given month of a year
+# code- 37 : Finding Number of times x digit occurs in a given input
+
+'''
+Input : 
+Enter a number : 897982
+Enter the digit : 9
+Output :  
+2
+Explanation : The digit 9 occurs twice
+'''
+'''
+num = input("Enter a number : ")
+n = input("Enter the digit : ")
+c = 0
+for i in num:
+    if i == n:
+        c += 1
+print(f"The digit {n} occurs {c} times")
+'''
 
 
-# code- 38 : Finding Number of times x digit occurs in a given input
+def occurrances(n, d):
+    count = 0
+ 
+    while (n > 0):
+        if(n % 10 == d):
+            count = count + 1
+  
+        n = n // 10
+ 
+    return(f"The digit {d} occurs {count} times")
+    
+d = 2
+n = 828282
+print(occurrances(n, d))
+
+
 
 # code- 39 : Finding number of integers which has exactly x divisors
 
 
-# code- 40 : Finding Roots of a quadratic equation
+# code- 40 : Finding Roots of a quadratic equation ==========================================================================
 
 # x = [-b ± √(b² - 4ac)] / 2a
 '''
@@ -61,20 +94,4 @@ else:  # q<0
     print("Roots are complex")
     print(- b / (2*a), " + i", q)
     print(- b / (2*a), " - i", q)
-'''
-
-# r = 0
-# for i in range(len(str(n))):
-#     d = n%10
-#     r = r + d
-#     n = n//10
-# print(r)
-
-'''
-def fun(n):
-    if n == 0:
-        return 0
-    return n%10 + fun(n/10)
-
-print(fun(123))
 '''
