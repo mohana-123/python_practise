@@ -16,6 +16,8 @@ g = math.gcd(n,d)
 
 print(f"the addition of {n1}/{d1} and {n2}/{d2} are {n//g}/{d//g}")
 '''
+
+
 '''
 from fractions import Fraction
 
@@ -39,19 +41,33 @@ n1 = n.replace('0','1')
 print(n1)
 '''
 
+'''
+n = input()
+#converting into string
+n=str(n) 
+#then into the list
+n=list(n)
+r="" #empty string for addind it the item of list
+for i in range(len(n)):
+    #if we find '0' we will replace it with '1'
+    if(n[i]=='0'):
+        n[i]='1'
+    r=r + n[i]  #creating the new integer 
+  
+print("Converted number is :",int(r))
+'''
+
 # code-32: Can a number be expressed as a sum of two prime numbers ============================================================
 '''
+import math
 num = int(input(f"Insert the num: "))
 
 # find the primes in a range
 primes = [2,3]
 
-for n in range(2,num+1):
+for n in range(4,num):
     f = 0
-    if n <= 3:
-        continue
-
-    for i in range(2,n):
+    for i in range(2,int(math.sqrt(n))+1):
         if n%i == 0:
             f = 1
             break
@@ -61,10 +77,16 @@ for n in range(2,num+1):
 
 # check the sum pairs
 
-for m in range(len(primes)):
-    for n in range(1, len(primes)):
-        if primes[m] + primes[n] == num:
-            print(primes[m], primes[n])
+# for m in range(len(primes)):
+#     for n in range(1, len(primes)):
+#         if primes[m] + primes[n] == num:
+#             print(primes[m], primes[n])
+
+for p in primes:
+    if p > num//2:
+        break
+    if num-p in primes:
+        print(p, num-p)
 '''
 
 # code-33:Count possible decoding of a given digit sequence =================================================================
@@ -111,23 +133,7 @@ print(c)
  Checking the length of the string.
  According to the place of the digit, we will show the output.
 '''
-'''
-def convert_to_word(num):
-    l = len(num)
 
-    if l == 0:
-        return "enter anything to test it out bro!!!"
-    else:
-        if l > 4:
-            print("give a string of length < 3")
-            return
-        
-        else:
-            pass
-
-num = input()
-print(convert_to_word(num))
-'''
 '''
 def convert_to_words(num):
  
@@ -193,7 +199,7 @@ def convert_to_words(num):
  
 # Driver Code
 convert_to_words(input()) 
-'''     
+'''
 # felt very difficult still i must understand
 
 
@@ -257,7 +263,6 @@ def occurrances(n, d):
     while (n > 0):
         if(n % 10 == d):
             count = count + 1
-     
         n = n // 10
  
     return(f"The digit {d} occurs {count} times")
@@ -273,10 +278,10 @@ print(occurrances(n, d))
 # in between 1-7 how many numbers are having the factors of exactly 2
 # 2,3,4,5 are the number which has exactly 2 factors those are 1 and itself
 
-number = 7
-divisors = 2
+# number = 7
+# divisors = 2
 
-count = 0
+# count = 0
 
 
 
