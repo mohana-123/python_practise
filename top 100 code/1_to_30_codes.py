@@ -1,5 +1,3 @@
-# Day-1 ######################################################################################################################
-
 # code-1: check weather a number is odd or even using bitwise operators =========================================================
 '''
 num = int(input())
@@ -173,7 +171,6 @@ for i in str(num):
     s += int(i)
 print(s)'''
 
-# Day-2 #####################################################################################################################
 
 # code-8: Find the Reverse of a Number ==================================================================================
 
@@ -371,7 +368,6 @@ num, power = map(int, input().split())
 print(fun(num,power))
 '''
 
-# Day-3 #######################################################################################################################
 
 # code-15: Find the Factors of a Number ==========================================================================
 
@@ -561,7 +557,6 @@ else:
     print(f"No! {sum} is a not Harshad number")
 '''
 
-# Day-4 #######################################################################################################################
 
 # code-22: Abundant Number in Python ===============================================================================================
 '''
@@ -810,7 +805,6 @@ print('Maximum number of handshakes possible for', N, 'people are', no_of_handsh
 '''
 
 
-# Day-5 #######################################################################################################################
 
 # code-29:Calculating the area of circle using Python ======================================================================
 '''
@@ -821,202 +815,4 @@ print(round(area, 2))
 '''
 
 
-
-# code-30:Addition of two fractions ======================================================================================
-'''
-import math
-print("enter the numerator and denomenator of 1st fraction ",end='')
-n1,d1 = map(int, input().split())
-
-print("enter the numerator and denomenator of 2nd fraction ",end='')
-n2,d2 = map(int, input().split())
-
-print(f"the fractions are {n1}/{d1} and {n2}/{d2}")
-
-n = (n1*d2) + (n2*d1)
-d = d2*d1
-
-g = math.gcd(n,d)
-
-print(f"the addition of {n1}/{d1} and {n2}/{d2} are {n//g}/{d//g}")
-'''
-'''
-from fractions import Fraction
-
-print("enter the numerator and denomenator of 1st fraction ",end='')
-n1,d1 = map(int, input().split())
-f1 = Fraction(n1,d1)
-
-print("enter the numerator and denomenator of 2nd fraction ",end='')
-n2,d2 = map(int, input().split())
-f2 = Fraction(n2,d2)
-
-r = f1+f2
-print(r)
-'''
-
-
-# code-31: Replace all 0’s with 1 in a given integer ===========================================================================
-'''
-n = input()
-n1 = n.replace('0','1')
-print(n1)
-'''
-
-# code-32: Can a number be expressed as a sum of two prime numbers ============================================================
-'''
-num = int(input(f"Insert the num: "))
-
-# find the primes in a range
-primes = [2,3]
-
-for n in range(2,num+1):
-    f = 0
-    if n <= 3:
-        continue
-
-    for i in range(2,n):
-        if n%i == 0:
-            f = 1
-            break
-    if f == 0:
-        primes.append(n)
-# print(primes)
-
-# check the sum pairs
-
-for m in range(len(primes)):
-    for n in range(1, len(primes)):
-        if primes[m] + primes[n] == num:
-            print(primes[m], primes[n])
-'''
-
-# code-33:Count possible decoding of a given digit sequence =================================================================
-'''
-concepts
-Possible decoding (1, 3, 1,)    = ACA
-Possible decoding (13, 1)   = MA
-So, the total possible decoding’s of sequence 131 is 2.
-'''
-
-# n = 123
-'''r = 0
-for i in range(len(str(n))):
-    d = n%10
-    r = r + d
-    n = n//10
-print(r)'''
-
-'''
-def fun(n):
-    if n == 0:
-        return 0
-    return n%10 + fun(n//10)
-
-print(fun(123))
-'''
-
-# code-34:Calculate the number of digits in an integer ====================================================================
-'''
-n = int(input())
-c = 0
-for i in range(len(str(n))):
-    c += 1
-print(c)
-'''
-
-
-# code-35:Convert digit/number to words ===========================================================================
-'''
- Taking input as a string from the user.
- Check the length of the input.
- if the length is zero print empty and if the length is greater than 4 print "give a string of specific length"
- if length id between 1 - 4, Create arrays for different values.
- Checking the length of the string.
- According to the place of the digit, we will show the output.
-'''
-'''
-def convert_to_word(num):
-    l = len(num)
-
-    if l == 0:
-        return "enter anything to test it out bro!!!"
-    else:
-        if l > 4:
-            print("give a string of length < 3")
-            return
-        
-        else:
-            pass
-
-num = input()
-print(convert_to_word(num))
-'''
-'''
-def convert_to_words(num):
- 
-    l = len(num)
- 
-    # Base cases
-    if (l == 0):
-        print("empty string")
-        return
- 
-    if (l > 4):
-        print("Length more than 4 is not supported")
-        return
- 
-    single_digits = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
- 
-    two_digits = ["", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
- 
-    tens_multiple = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
- 
-    tens_power = ["hundred", "thousand"]
- 
-    print(num, ":", end=" ")
- 
-    if (l == 1):
-        print(single_digits[ord(num[0]) - 48])
-        return
- 
-    x = 0
-    while (x < len(num)):
-        if (l >= 3):
-            if (ord(num[x]) - 48 != 0):
-                print(single_digits[ord(num[x]) - 48],
-                      end=" ")
-                print(tens_power[l - 3], end=" ")
- 
-            l -= 1
- 
-        else:
- 
-            if (ord(num[x]) - 48 == 1):
-                sum = (ord(num[x]) - 48 +
-                       ord(num[x+1]) - 48)
-                print(two_digits[sum])
-                return
- 
-            elif (ord(num[x]) - 48 == 2 and
-                  ord(num[x + 1]) - 48 == 0):
-                print("twenty")
-                return
- 
-            else:
-                i = ord(num[x]) - 48
-                if(i > 0):
-                    print(tens_multiple[i], end=" ")
-                else:
-                    print("", end="")
-                x += 1
-                if(ord(num[x]) - 48 != 0):
-                    print(single_digits[ord(num[x]) - 48])
-        x += 1
- 
- 
-# Driver Code
-convert_to_words(input()) 
-'''     
-# felt very difficult still i must understand
 
