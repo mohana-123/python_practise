@@ -410,3 +410,21 @@ my_array = [1, 4, 3, -5, -4, 8, 6]
 n = len(my_array)
 print(small_num(my_array,n))
 '''
+
+# code- 45 : Reversing a Number using Recursion ================================================================================================
+
+'''
+input : 12345
+Output : 54321
+Explanation : Reverse of 12345 is 54321
+'''
+
+'''
+def rev(num,ans=0):
+    if num==0:
+        return ans
+    else:
+        return rev(num//10,ans*10+(num%10))
+
+print(rev(123))
+'''
