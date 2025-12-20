@@ -278,11 +278,18 @@ print(occurrances(n, d))
 # in between 1-7 how many numbers are having the factors of exactly 2
 # 2,3,4,5 are the number which has exactly 2 factors those are 1 and itself
 
-# number = 7
-# divisors = 2
+number = 7
+divisors = 2
+count = 0
 
-# count = 0
-
+for i in range(1,number+1):
+    count_factors = 0
+    for j in range(1,i+1):
+        if i%j == 0:
+            count_factors += 1
+    if count_factors == divisors:
+        count += 1
+print(count) 
 
 
 
