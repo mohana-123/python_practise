@@ -341,23 +341,19 @@ print(power_num(n,x))
 
 # without recursion:
 
-n = 11
-
-
-
 '''
-def is_prime(n, i=2):
+def isprime(n, i=2):
     if n <= 2:
-        return n == 2
-    if n % i == 0:
+        return n==2
+    if n%i == 0:
         return False
-    if i * i > n:
+    if i*i > n:
         return True
-    return is_prime(n, i + 1)
+    return isprime(n, i+1)
 
-n = int(input("Enter a number: "))
-if is_prime(n):
-    print(f"{n} is a prime number.")
+n = int(input())
+if isprime(n):
+    print("Yes, it is prime")
 else:
-    print(f"{n} is not a prime number.")
+    print("No, it is not a prime")
 '''

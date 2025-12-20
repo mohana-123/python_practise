@@ -96,15 +96,16 @@ print(f"{n} is a prime") if f==0 else print(f"{n} is not a prime")'''
 
 # by skipping even interation
 
-'''n= int(input())
-f = 0
-if n < 3:
-    print("prime number")
+'''
 
-for i in range(3, int(math.sqrt(n)+1),2):
+
+n = int(input())
+f = 0
+for i in range(1,int(pow(n,0.5)),2):
     if n%i == 0:
-            f=1
-            break
+        f=1
+        break
+
 print(f"{n} is a prime") if f==0 else print(f"{n} is not a prime")'''
 
 
