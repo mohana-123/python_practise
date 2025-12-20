@@ -428,3 +428,17 @@ def rev(num,ans=0):
 
 print(rev(123))
 '''
+
+# code- 46 : Calculate Length of the String using Recursion ============================================================================
+
+'''
+def lengthh(str):
+    if str == '':
+        return 0
+    return 1+ lengthh(str[1:])
+
+s = input()
+print(lengthh(s))
+'''
+
+
