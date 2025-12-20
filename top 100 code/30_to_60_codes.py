@@ -397,3 +397,16 @@ my_array = [1, 4, 3, -5, -4, 8, 6]
 n = len(my_array)
 print(max_num(my_array,n))
 '''
+
+# code- 44 : smallest Element in an Array using Recursion ================================================================================================
+'''
+def small_num(a,n):
+    if n == 1:
+        return a[0]
+    return min(a[n-1], small_num(a, n-1))
+
+
+my_array = [1, 4, 3, -5, -4, 8, 6]
+n = len(my_array)
+print(small_num(my_array,n))
+'''
