@@ -357,3 +357,43 @@ if isprime(n):
 else:
     print("No, it is not a prime")
 '''
+
+
+# code- 43 : Largest Element in an Array using Recursion ================================================================================================
+
+"""
+Input: A = [1, 4, 3, -5, -4, 8, 6]
+Output: 8 => 
+"""
+'''
+a = [1, 4, 3, -5, -4, 8, 6]
+me = a[0]
+
+for i in a:
+    if i > me:
+        me = i
+print(me)
+'''
+'''
+my_array = [1, 4, 3, -5, -4, 8, 6]
+max_element = my_array[0] # Assume the first element is the largest initially
+
+for num in my_array:
+    if num > max_element:
+        max_element = num
+
+print(max_element)
+# Output: 90
+'''
+
+# recurssion
+'''
+def max_num(a,n):
+    if n == 1:
+        return a[0]
+    return max(a[n-1], max_num(a, n-1))
+
+my_array = [1, 4, 3, -5, -4, 8, 6]
+n = len(my_array)
+print(max_num(my_array,n))
+'''
