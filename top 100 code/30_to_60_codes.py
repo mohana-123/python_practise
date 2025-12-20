@@ -273,11 +273,13 @@ print(occurrances(n, d))
 '''
 
 
-# code- 39 : Finding number of integers which has exactly x divisors
+# code- 39 : Finding number of integers which has exactly x divisors =======================================================
+
+# finished
 
 # in between 1-7 how many numbers are having the factors of exactly 2
 # 2,3,4,5 are the number which has exactly 2 factors those are 1 and itself
-
+'''
 number = 7
 divisors = 2
 count = 0
@@ -290,7 +292,7 @@ for i in range(1,number+1):
     if count_factors == divisors:
         count += 1
 print(count) 
-
+'''
 
 
 # code- 40 : Finding Roots of a quadratic equation ==========================================================================
@@ -316,4 +318,46 @@ else:  # q<0
     print("Roots are complex")
     print(- b / (2*a), " + i", q)
     print(- b / (2*a), " - i", q)
+'''
+
+# Codes for Recursion #########################################################################################################
+
+# code- 41 : Power of a Number ================================================================================================
+'''
+def power_num(n,x):
+    if x == 1:
+        return n
+    return n * power_num(n, x-1)
+
+n = 3
+x = 4
+print(power_num(n,x))
+'''
+
+# finished
+
+
+# code- 42 : Prime Number using recursion ================================================================================================
+
+# without recursion:
+
+n = 11
+
+
+
+'''
+def is_prime(n, i=2):
+    if n <= 2:
+        return n == 2
+    if n % i == 0:
+        return False
+    if i * i > n:
+        return True
+    return is_prime(n, i + 1)
+
+n = int(input("Enter a number: "))
+if is_prime(n):
+    print(f"{n} is a prime number.")
+else:
+    print(f"{n} is not a prime number.")
 '''
