@@ -113,6 +113,7 @@ def fun(n):
 
 print(fun(123))
 '''
+# felt difficult
 
 # code-34:Calculate the number of digits in an integer ====================================================================
 '''
@@ -259,7 +260,7 @@ print(f"The digit {n} occurs {c} times")
 '''
 def occurrances(n, d):
     count = 0
- 
+
     while (n > 0):
         if(n % 10 == d):
             count = count + 1
@@ -347,7 +348,7 @@ def isprime(n, i=2):
         return n==2
     if n%i == 0:
         return False
-    if i*i > n:
+    if i*i > n: # how? still has question (difficult)
         return True
     return isprime(n, i+1)
 
@@ -403,7 +404,7 @@ print(max_num(my_array,n))
 def small_num(a,n):
     if n == 1:
         return a[0]
-    return min(a[n-1], small_num(a, n-1))
+    return min(a[n-1], small_num(a, n-1)) # has doubt still (difficult)
 
 
 my_array = [1, 4, 3, -5, -4, 8, 6]
