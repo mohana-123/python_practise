@@ -1,3 +1,4 @@
+import math
 # code-1: check weather a number is odd or even using bitwise operators =========================================================
 '''
 num = int(input())
@@ -386,25 +387,7 @@ print(*(k for k in f))
 
 
 # code-16: Find the Prime Factors of a Number =============================================================================
-'''
-def pf(n):
-    if n < 4:
-        return n
-    arr = []
-    while n > 1:
-        for i in range(2, int(2+n//2)):
-            if i == (1 + n // 2):
-                arr.append(n)
-                n = n // n
-            if n % i == 0:
-                arr.append(i)
-                n = n // i
-                break
-    return arr
 
-n = 210
-print(pf(n))
-'''
 '''
 def fact(a):
     l = []
