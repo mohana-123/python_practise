@@ -61,13 +61,34 @@ for p in primes:
 '''
 
 
-# code-33:Count possible decoding of a given digit sequence =================================================================
+# code-33: Count possible decoding of a given digit sequence =================================================================
 
 
 '''
-concepts
 Possible decoding (1, 3, 1,)    = ACA
 Possible decoding (13, 1)   = MA
 So, the total possible decoding's of sequence 131 is 2.
 '''
 
+
+# alpha_digit = {1:'A', 2:'B', 3:'C', 4:'D', 5:'E', 6:'F', 7:'G', 8:'H', 9:'I', 10:'J', 11:'K', 12:'L', 13:'M', 14:'N',
+
+#             }
+
+
+# code- 42 : Prime Number using recursion ================================================================================================
+
+# prime Number using recursion
+'''
+def prime(n,i =2):
+    if n < 2:
+        False
+    if n%i == 0:
+        return False
+    if i*i > n:
+        return True
+    return prime(n,i+1)
+
+n = 20
+print(prime(n))
+'''
