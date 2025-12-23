@@ -70,11 +70,28 @@ Possible decoding (13, 1)   = MA
 So, the total possible decoding's of sequence 131 is 2.
 '''
 
+def encodenum(s,a):
+    cnt = [0] * (a+1)           
+    cnt[0], cnt[1] = 1,1
 
-# alpha_digit = {1:'A', 2:'B', 3:'C', 4:'D', 5:'E', 6:'F', 7:'G', 8:'H', 9:'I', 10:'J', 11:'K', 12:'L', 13:'M', 14:'N',
+    for k in range(2,a+1):
+        cnt[k] = 0
+        cnt[k] = cnt[k-1]
 
-#             }
+        if s[k-2] == '1' or (s[k-2] == '2' and s[k-1] < '7'):
+            cnt[k] += cnt[k-2]
+    return cnt[a]
 
+s = "12321"
+print(encodenum(s,len(s)))
+
+'''
+[1,1,0,0,0,0]
+ 0 1 2 3 4 5
+
+[1,1,1,0,0,0]
+ 0 1 2 3 4 5
+'''
 
 # code- 42 : Prime Number using recursion ================================================================================================
 
@@ -92,3 +109,7 @@ def prime(n,i =2):
 n = 20
 print(prime(n))
 '''
+
+
+
+# code- 44 : smallest Element in an Array using Recursion ================================================================================================

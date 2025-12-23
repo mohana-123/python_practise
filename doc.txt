@@ -17,3 +17,17 @@ or push an existing repository from the command line ===========================
 git remote add origin https://github.com/mohana-123/python_practise.git
 git branch -M main
 git push -u origin main
+
+
+
+nume('12321') = nume('1232')'1' + nume('123')'21'
+                            A                  U 
+nume('1232') = nume('123')'2' + nume('12')'32' => no
+                        ||=> B 
+nume('123') = nume('12')'3' + nume('1')'23'
+                        C               
+nume('12') = nume('1')'2' + nume('')
+
+nume('1') = nume('')'1'
+
+nume('') = 1

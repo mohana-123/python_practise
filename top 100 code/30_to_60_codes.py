@@ -348,7 +348,7 @@ def isprime(n, i=2):
         return n==2
     if n%i == 0:
         return False
-    if i*i > n: # how? still has question (difficult)
+    if i*i > n: # how? still has question
         return True
     return isprime(n, i+1)
 
