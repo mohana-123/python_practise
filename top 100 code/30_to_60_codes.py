@@ -404,7 +404,7 @@ print(max_num(my_array,n))
 def small_num(a,n):
     if n == 1:
         return a[0]
-    return min(a[n-1], small_num(a, n-1)) # has doubt still (difficult)
+    return min(a[n-1], small_num(a, n-1))
 
 
 my_array = [1, 4, 3, -5, -4, 8, 6]
@@ -442,4 +442,46 @@ s = input()
 print(lengthh(s))
 '''
 
+
+# code- 47 : Print All Permutations of a String- C =============================================================================
+'''
+import math
+
+s = int(input())
+
+print(math.perm(s))
+'''
+# difficult : https://www.youtube.com/watch?v=mfXIIqMgNA8 , https://www.youtube.com/watch?v=FZe0UqISmUw
+
+
+# code-48 : Given an integer N the task is to print the F(N)th term ===========================================================
+'''
+n = int(input())
+result = 0
+current = 0
+while(current != n+1):
+    cur = 1
+
+    for i in range(current)
+'''
+'''
+def term(calculated, current, N):
+    result = 0
+
+    while current != N + 1:
+        cur = 1
+        # product of terms till current
+        # range(start, stop) is exclusive of the stop value
+        for i in range(calculated, calculated + current):
+            cur *= i
+            
+        calculated = i + 1
+        result += cur
+        current += 1
+        
+    return result
+
+N = 3
+print(term(1, 1, N))
+'''
 

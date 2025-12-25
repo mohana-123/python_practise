@@ -69,7 +69,7 @@ Possible decoding (1, 3, 1,)    = ACA
 Possible decoding (13, 1)   = MA
 So, the total possible decoding's of sequence 131 is 2.
 '''
-
+'''
 def encodenum(s,a):
     cnt = [0] * (a+1)           
     cnt[0], cnt[1] = 1,1
@@ -84,7 +84,7 @@ def encodenum(s,a):
 
 s = "12321"
 print(encodenum(s,len(s)))
-
+'''
 '''
 [1,1,0,0,0,0]
  0 1 2 3 4 5
@@ -113,3 +113,13 @@ print(prime(n))
 
 
 # code- 44 : smallest Element in an Array using Recursion ================================================================================================
+'''
+def func(a,l):
+    if l == 1:
+        return a[0]
+    return min(a[l-1], func(a,l-1))
+
+a = [1, 4, 45, 6, -50, 10, 2]
+l = len(a)
+print(func(a,l))
+'''
