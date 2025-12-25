@@ -485,3 +485,24 @@ N = 3
 print(term(1, 1, N))
 '''
 
+# using arrays ###########################################################################################################
+
+
+# code-49 : Find Largest element in an array ========================================================================
+'''
+a = [10, 89, 9, 56, 4, 80, 8]
+max_ele = a[0]
+for i in range(len(a)):
+    if max_ele < a[i]:
+        max_ele = a[i]
+print(max_ele)
+'''
+
+# code-50 : Find smallest element in an array ========================================================================
+
+a = [10, 89, 9, 56, 4, 80, 8]
+min_ele = a[0]
+for i in range(len(a)):
+    if min_ele > a[i]:
+        min_ele = a[i]
+print(min_ele)
