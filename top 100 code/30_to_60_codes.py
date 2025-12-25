@@ -499,10 +499,43 @@ print(max_ele)
 '''
 
 # code-50 : Find smallest element in an array ========================================================================
-
+'''
 a = [10, 89, 9, 56, 4, 80, 8]
 min_ele = a[0]
 for i in range(len(a)):
     if min_ele > a[i]:
         min_ele = a[i]
 print(min_ele)
+'''
+
+# code-51 : Find the Smallest and largest element in an array ==================================================================
+'''
+a = [10, 59, 9, 56, 14, 80, 8]
+min_ele = max_ele = a[0]
+for i in range(len(a)):
+    if min_ele > a[i]:
+        min_ele = a[i]
+    if max_ele < a[i]:
+        max_ele = a[i]
+print(f"the minimun element is {min_ele} and maximum element is {max_ele}")
+'''
+
+# code-52 : Find the second Smallest number in an array ==================================================================
+'''
+import sys
+a = [10, 89, 9, 56, 4, 80, 8]
+min_ele = a[0]
+for i in range(len(a)):
+    if min_ele > a[i]:
+        min_ele = a[i]
+print(min_ele)
+
+sec = sys.maxsize
+for i in range(len(a)):
+    c1 = a[i] < sec
+    c2 = a[i] > min_ele
+    if c1 and c2:
+        sec = a[i]
+print(sec)
+'''
+
