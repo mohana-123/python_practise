@@ -23,10 +23,10 @@ random_num = random.randint(1,100)
 print(random_num)
 print("You are given 5 chances to guess the number")
 
-while chances < 5:
+while chances < 7:
     user_input = int(input("Guess the number! => "))
     chances +=1
-    if chances >= 5:
+    if chances >= 7:
         print(f"you didn't guessed it. The number is {random_num}")
         break
     if user_input < random_num:
