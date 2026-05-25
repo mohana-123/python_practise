@@ -53,13 +53,15 @@ print(fun(n))
 
 # Method 3: Using Recursion
 
-'''def resum(sum,num1,num2):
+'''
+def resum(sum,num1,num2):
     if num1 > num2:
         return sum
     return num1 + resum(sum,num1+1,num2)
 
 sum = 0
-print(resum(sum,num1,num2))'''
+print(resum(sum,num1,num2))
+'''
 
 
 # code-4: Leap Year Program ==================================================================================================

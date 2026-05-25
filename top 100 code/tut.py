@@ -222,7 +222,7 @@ with open(filename, 'r') as finww:
 
 # blackjack card game
 
-import random
+# import random
 '''
 class Card:
     def __init__(self, suit, rank):
@@ -315,19 +315,3 @@ hand = Hand()
 hand.add_card(deck.deal(2))
 hand.display()
 '''
-
-
-
-cards = []
-suits = ['spades', 'clubs', 'hearts', 'diamonds']
-ranks = ['A','2','3','4','5','6','7','8','9','10','J','Q','K']
-for suit in suits:
-    for rank in ranks:
-        cards.append([suit, rank])
-
-def shuffle():
-    random.shuffle(cards)
-
-shuffle()
-card = cards.pop()
-print(card)

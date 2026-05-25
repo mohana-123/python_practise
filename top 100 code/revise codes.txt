@@ -1,0 +1,7 @@
+level one ===============================================================================
+
+1.  sum of the digits
+2.  reverse of a number
+3.  Find smallest digit in a number
+4.  Check Armstrong number
+5.  
