@@ -4,4 +4,14 @@ level one ======================================================================
 2.  reverse of a number
 3.  Find smallest digit in a number
 4.  Check Armstrong number
-5.  
+5.  reverse of a string manually
+        def rev_str(text):
+            rev_text = ''
+            for i in range(len(text)):
+                rev_text = text[i] + rev_text
+            return rev_text
+
+        print(rev_str(input()))
+        
+6. Count vowels in a sentence.
+7.  
