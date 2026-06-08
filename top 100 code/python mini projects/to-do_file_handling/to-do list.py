@@ -6,30 +6,34 @@ print("4. To Leave")
 
 
 def add_to_the_list(enter_item): #done
-    with open('to-do/to_do_list.txt','a') as fa:
+    with open('python mini projects/to-do_file_handling/to_do_list.txt','a') as fa:
         contents = enter_item
         fa.write(contents + '\n')
 
 def remove_item_list(remove_item): # done
-    with open('to-do/to_do_list.txt','r') as fr:
+    with open('python mini projects/to-do_file_handling/to_do_list.txt','r') as fr:
         contents = fr.read().splitlines()
         if remove_item in contents:
             contents.remove(remove_item)
 
-            with open('to-do/to_do_list.txt','w') as fw:
+            with open('python mini projects/to-do_file_handling/to_do_list.txt','w') as fw:
                 fw.write('\n'.join(contents) + '\n')
         else:
             print("Not found")
 
 def show_list(): #done
-    with open('to-do/to_do_list.txt','r') as rr:
+    with open('python mini projects/to-do_file_handling/to_do_list.txt','r') as rr:
         content = rr.read()
         return content
 
 
 while True:
-
-    choice = int(input("enter your option: "))
+    try:
+        choice = int(input("enter your option: "))
+        if choice not in [1,2,3,4]:
+            raise
+    except Exception:
+        print("Enter only the options [1,2,3,4]")
 
     if choice == 1:
         enter_item = input("Enter Your Item: ")

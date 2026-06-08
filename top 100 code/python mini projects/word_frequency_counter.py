@@ -10,4 +10,5 @@ for word in words:
     else:
         frequency[words_clean] = 1
 
-print(frequency)
+for index,item in enumerate(frequency):
+    print(f"{item}==>{index}")
