@@ -233,8 +233,8 @@ total = amount_paid*(tip_percentage/100)
 print(total+amount_paid)
 '''
 
-
-
+# try_catch ===============================================================================
+'''
 try:
     f = open('revise codes.txt')
     if f.name != 'mohana.txt':
@@ -249,4 +249,4 @@ else:
     f.close()
 finally:
     print("you run you code! congrats!")
-
+'''
