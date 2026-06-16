@@ -35,7 +35,7 @@ print(make_matcha())
 
 # practise ===================================================================================================================
 
-'''
+
 def mission_timer(base_fn):
     def enhanced_fn(*args, **kargs):
         print("3...")
@@ -67,4 +67,3 @@ def deploy_satellite(orbit_type, altitude_km):
 
 result = launch_probe("Europa")
 print("Stored mission result:", result)
-'''
